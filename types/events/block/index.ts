@@ -1,7 +1,7 @@
-import { type BlockAddedEvent, BlockAddedMutationType } from './BlockAdded';
-import { type BlockChangedEvent, BlockChangedMutationType } from './BlockChanged';
-import { type BlockMovedEvent, BlockMovedMutationType } from './BlockMoved';
-import { type BlockRemovedEvent, BlockRemovedMutationType } from './BlockRemoved';
+import { BlockAddedMutationType, type BlockAddedEvent } from './BlockAdded';
+import { BlockChangedMutationType, type BlockChangedEvent } from './BlockChanged';
+import { BlockMovedMutationType, type BlockMovedEvent } from './BlockMoved';
+import { BlockRemovedMutationType, type BlockRemovedEvent } from './BlockRemoved';
 
 /**
  * Map for Custom Events related to block mutation types

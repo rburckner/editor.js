@@ -36,7 +36,7 @@ export default class Saver extends Module {
         chainData.push(this.getSavedData(block));
       });
 
-      const extractedData = await Promise.all(chainData) as Array<Pick<SavedData, 'data' | 'tool'>>;
+      const extractedData = await Promise.all(chainData) as Pick<SavedData, 'data' | 'tool'>[];
       const sanitizedData = await sanitizeBlocks(extractedData, (name) => {
         return Tools.blockTools.get(name).sanitizeConfig;
       });

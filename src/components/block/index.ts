@@ -3,10 +3,10 @@ import {
   BlockTool as IBlockTool,
   BlockToolData,
   BlockTune as IBlockTune,
+  PopoverItemParams,
   SanitizerConfig,
-  ToolConfig,
   ToolboxConfigEntry,
-  PopoverItemParams
+  ToolConfig
 } from '../../../types';
 
 import { SavedData } from '../../../types/data-formats';

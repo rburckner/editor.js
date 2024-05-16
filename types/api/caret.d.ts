@@ -1,4 +1,4 @@
-import { BlockAPI } from "./block";
+import { BlockAPI } from './block';
 
 /**
  * Describes Editor`s caret API

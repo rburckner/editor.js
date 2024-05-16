@@ -9,8 +9,8 @@ interface Element {
   msMatchesSelector: (selector: string) => boolean;
   oMatchesSelector: (selector: string) => boolean;
 
-  prepend: (...nodes: Array<string | Node>) => void;
-  append: (...nodes: Array<string | Node>) => void;
+  prepend: (...nodes: (string | Node)[]) => void;
+  append: (...nodes: (string | Node)[]) => void;
 }
 
 /**
@@ -77,7 +77,7 @@ if (!Element.prototype.closest) {
  * @param {Node | Node[] | string | string[]} nodes - nodes to prepend
  */
 if (!Element.prototype.prepend) {
-  Element.prototype.prepend = function prepend(nodes: Array<Node | string> | Node | string): void {
+  Element.prototype.prepend = function prepend(nodes: (Node | string)[] | Node | string): void {
     const docFrag = document.createDocumentFragment();
 
     if (!Array.isArray(nodes)) {
@@ -149,7 +149,7 @@ window.requestIdleCallback = window.requestIdleCallback || function (cb) {
   return setTimeout(function () {
     cb({
       didTimeout: false,
-      timeRemaining: function () {
+      timeRemaining () {
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         return Math.max(0, 50 - (Date.now() - start));
       },

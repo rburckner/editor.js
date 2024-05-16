@@ -3,7 +3,7 @@
  * Use external module CodeX Tooltip
  */
 import CodeXTooltips from 'codex-tooltip';
-import type { TooltipOptions, TooltipContent } from 'codex-tooltip/types';
+import type { TooltipContent, TooltipOptions } from 'codex-tooltip/types';
 
 /**
  * Tooltips lib: CodeX Tooltips

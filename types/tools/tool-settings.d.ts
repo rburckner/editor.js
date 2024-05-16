@@ -1,6 +1,6 @@
 import { ToolConfig } from './tool-config';
-import { ToolConstructable, BlockToolData } from './index';
-import { PopoverItemDefaultParams, PopoverItemSeparatorParams, PopoverItemHtmlParams } from '../configs';
+import { BlockToolData, ToolConstructable } from './index';
+import { PopoverItemDefaultParams, PopoverItemHtmlParams, PopoverItemSeparatorParams } from '../configs';
 
 /**
  * Tool may specify its toolbox configuration
@@ -40,7 +40,7 @@ export type TunesMenuConfigDefaultItem = PopoverItemDefaultParams & {
   /**
    * Tune displayed text.
    * Alias for title property
-   * 
+   *
    * @deprecated - use title property instead
    */
   label?: string

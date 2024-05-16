@@ -42,9 +42,9 @@ import { SavedData } from '../../../types/data-formats';
  * @param sanitizeConfig — sanitize config to use or function to get config for Tool
  */
 export function sanitizeBlocks(
-  blocksData: Array<Pick<SavedData, 'data' | 'tool'>>,
+  blocksData: Pick<SavedData, 'data' | 'tool'>[],
   sanitizeConfig: SanitizerConfig | ((toolName: string) => SanitizerConfig)
-): Array<Pick<SavedData, 'data' | 'tool'>> {
+): Pick<SavedData, 'data' | 'tool'>[] {
   return blocksData.map((block) => {
     const toolConfig = _.isFunction(sanitizeConfig) ? sanitizeConfig(block.tool) : sanitizeConfig;
 
@@ -121,7 +121,7 @@ function deepSanitize(dataToSanitize: object | string, rules: SanitizerConfig): 
  * @param {Array} array - [1, 2, {}, []]
  * @param {SanitizerConfig} ruleForItem - sanitizer config for array
  */
-function cleanArray(array: Array<object | string>, ruleForItem: SanitizerConfig): Array<object | string> {
+function cleanArray(array: (object | string)[], ruleForItem: SanitizerConfig): (object | string)[] {
   return array.map((arrayItem) => deepSanitize(arrayItem, ruleForItem));
 }
 

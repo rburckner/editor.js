@@ -1,7 +1,7 @@
 import type { ConversionConfig } from '../../../types/configs/conversion-config';
 import type { BlockToolData } from '../../../types/tools/block-tool-data';
 import type Block from '../block';
-import { isFunction, isString, log, equals } from '../utils';
+import { equals, isFunction, isString, log } from '../utils';
 
 
 /**

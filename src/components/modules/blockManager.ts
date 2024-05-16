@@ -230,7 +230,7 @@ export default class BlockManager extends Module {
   public composeBlock({
     tool: name,
     data = {},
-    id = undefined,
+    id,
     tunes: tunesData = {},
   }: {tool: string; id?: string; data?: BlockToolData; tunes?: {[name: string]: BlockTuneData}}): Block {
     const readOnly = this.Editor.ReadOnly.isEnabled;
@@ -266,7 +266,7 @@ export default class BlockManager extends Module {
    * @returns {Block}
    */
   public insert({
-    id = undefined,
+    id,
     tool = this.config.defaultBlock,
     data = {},
     index,

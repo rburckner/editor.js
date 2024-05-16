@@ -7,7 +7,7 @@ import { I18nInternalNS } from '../../i18n/namespace-internal';
 import Flipper from '../../flipper';
 import { TunesMenuConfigItem } from '../../../../types/tools';
 import { resolveAliases } from '../../utils/resolve-aliases';
-import { type Popover, PopoverDesktop, PopoverMobile, PopoverItemParams, PopoverItemDefaultParams, PopoverItemType } from '../../utils/popover';
+import { PopoverDesktop, PopoverItemDefaultParams, PopoverItemParams, PopoverItemType, PopoverMobile, type Popover } from '../../utils/popover';
 import { PopoverEvent } from '../../utils/popover/popover.types';
 import { isMobileScreen } from '../../utils';
 import { EditorMobileLayoutToggled } from '../../events';

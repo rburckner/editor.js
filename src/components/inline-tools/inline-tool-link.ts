@@ -1,7 +1,7 @@
 import SelectionUtils from '../selection';
 import * as _ from '../utils';
-import { InlineTool, SanitizerConfig, API } from '../../../types';
-import { Notifier, Toolbar, I18n, InlineToolbar } from '../../../types/api';
+import { API, InlineTool, SanitizerConfig } from '../../../types';
+import { I18n, InlineToolbar, Notifier, Toolbar } from '../../../types/api';
 import { IconLink, IconUnlink } from '@codexteam/icons';
 
 /**

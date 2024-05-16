@@ -4,7 +4,7 @@ import * as _ from '../../utils';
 import Flipper from '../../flipper';
 import I18n from '../../i18n';
 import { I18nInternalNS } from '../../i18n/namespace-internal';
-import { ToolboxConfigEntry, BlockToolData } from '../../../../types';
+import { BlockToolData, ToolboxConfigEntry } from '../../../../types';
 
 /**
  * HTML Elements used for ConversionToolbar
@@ -264,7 +264,7 @@ export default class ConversionToolbar extends Module<ConversionToolbarNodes> {
     this.tools.push({
       name: toolName,
       button: tool,
-      toolboxItem: toolboxItem,
+      toolboxItem,
     });
 
     this.listeners.on(tool, 'click', async () => {

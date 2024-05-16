@@ -25,7 +25,7 @@ export default class EventsDispatcher<EventMap> {
    * All subscribers grouped by event name
    * Object with events` names as key and array of callback functions as value
    */
-  private subscribers = <Subscriptions<EventMap>>{};
+  private subscribers = {} as Subscriptions<EventMap>;
 
   /**
    * Subscribe any event on callback
