@@ -1,4 +1,4 @@
-import { EditorConfig } from '../../types/index';
+import { EditorConfig } from '../../types';
 import { EditorEventMap } from '../components/events';
 import EventsDispatcher from '../components/utils/events';
 
