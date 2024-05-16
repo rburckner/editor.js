@@ -5,17 +5,14 @@
  */
 
 import {
-  Dictionary,
-  DictValue,
   EditorConfig,
-  I18nConfig,
-  I18nDictionary,
 } from './configs';
 
 import {
   Blocks,
   Caret,
   Events,
+  I18n,
   InlineToolbar,
   Listeners,
   Notifier,
@@ -26,16 +23,15 @@ import {
   Styles,
   Toolbar,
   Tooltip,
-  I18n,
-  Ui,
+  Ui
 } from './api';
 
-import { OutputData } from './data-formats';
-import { BlockMutationEvent, BlockMutationEventMap, BlockMutationType } from './events/block';
-import { BlockAddedMutationType, BlockAddedEvent } from './events/block/BlockAdded';
-import { BlockChangedMutationType, BlockChangedEvent } from './events/block/BlockChanged';
-import { BlockMovedMutationType, BlockMovedEvent } from './events/block/BlockMoved';
-import { BlockRemovedMutationType, BlockRemovedEvent } from './events/block/BlockRemoved';
+import {OutputData} from './data-formats';
+import {BlockMutationEvent, BlockMutationEventMap, BlockMutationType} from './events/block';
+import {BlockAddedEvent, BlockAddedMutationType} from './events/block/BlockAdded';
+import {BlockChangedEvent, BlockChangedMutationType} from './events/block/BlockChanged';
+import {BlockMovedEvent, BlockMovedMutationType} from './events/block/BlockMoved';
+import {BlockRemovedEvent, BlockRemovedMutationType} from './events/block/BlockRemoved';
 
 /**
  * Interfaces used for development
@@ -86,9 +82,9 @@ export {
   PopoverItemWithoutConfirmationParams
 } from '../src/components/utils/popover';
 
-export { OutputData, OutputBlockData} from './data-formats/output-data';
-export { BlockId } from './data-formats/block-id';
-export { BlockAPI } from './api'
+export {OutputData, OutputBlockData} from './data-formats/output-data';
+export {BlockId} from './data-formats/block-id';
+export {BlockAPI} from './api'
 export {
   BlockMutationType,
   BlockMutationEvent,
@@ -142,7 +138,8 @@ declare class EditorJS {
   public toolbar: Toolbar;
   public inlineToolbar: InlineToolbar;
   public readOnly: ReadOnly;
-  constructor(configuration?: EditorConfig|string);
+
+  constructor(configuration?: EditorConfig | string);
 
   /**
    * API shorthands
